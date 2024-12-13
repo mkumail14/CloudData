@@ -1,0 +1,677 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  width: 70%;
+  margin: 50px auto 0
+}
+
+.logo {
+  width: 100%
+}
+
+.logo img {
+  width: 108px;
+  cursor: pointer
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%
+}
+
+.menu {
+  width: 100%
+}
+
+.menu ul {
+  display: flex;
+  justify-content: end;
+  gap: 40px;
+  margin: 0;
+  padding: 0
+}
+
+.menu ul li {
+  cursor: pointer;
+  list-style-type: none;
+  color: #4a4a4a;
+  white-space: nowrap;
+  font-size: 14px
+}
+
+.maincard {
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  min-height: 350px;
+  margin-top: 30px;
+  box-shadow: 0 21px 33px #0000001a
+}
+
+.card-sidebar {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column
+}
+
+.card-sidebar .image1,.card-sidebar .image2 {
+  margin-bottom: 50px
+}
+
+.card-sidebar img {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer
+}
+
+.card-container {
+  border: 1px solid #fff;
+  padding: 0 50px;
+  width: 100%
+}
+
+.card-container div h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: .85;
+  letter-spacing: .6px;
+  color: #000;
+  margin-bottom: 28px
+}
+
+.card-container .resize-section {
+  width: 100%
+}
+
+.card-container .text-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.card-container .text-footer .links {
+  flex: 1
+}
+
+.card-container .text-footer div {
+  margin-bottom: 5px
+}
+
+.card-container .text-footer div a {
+  color: #638eff;
+  font-weight: 700
+}
+
+.card-container .files-section {
+  height: 100%
+}
+
+.card-container .files-section .files-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.card-container .files-section .files-header .files-btn {
+  display: flex;
+  align-items: center;
+  gap: 30px
+}
+
+.card-container .files-section .files-header .files-btn div {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  cursor: pointer
+}
+
+.card-container .files-section .files-header .files-btn div:active {
+  opacity: .5
+}
+
+.card-container .files-section .files-header .files-btn div:hover {
+  text-decoration: underline
+}
+
+.card-container .files-section .files-header .files-btn .downloadbtn {
+  color: #638eff
+}
+
+.card-container .files-section .files-header .files-btn .downloadbtn svg {
+  font-size: 20px;
+  margin-right: 6px;
+  margin-bottom: 2px
+}
+
+.card-container .files-section .files-header .files-btn .deletebtn {
+  color: #963a45
+}
+
+.card-container .files-section .files-header .files-btn .deletebtn svg {
+  font-size: 22px;
+  margin-right: 6px;
+  margin-bottom: 2px
+}
+
+.save-btn {
+  padding: 25px 10px;
+  text-align: right
+}
+
+.save-btn span {
+  background: none;
+  border: none;
+  min-height: 61px;
+  padding: 0 30px;
+  line-height: 57px;
+  margin-right: 40px;
+  cursor: pointer
+}
+
+.textArea {
+  font-size: 22px;
+  letter-spacing: -.7px;
+  color: #000;
+  width: 80%;
+  padding: 10px;
+  margin: 0 auto;
+  border: none;
+  min-height: 150px;
+  overflow: hidden
+}
+
+.textArea:focus {
+  outline: none
+}
+
+.textArea::placeholder {
+  color: #a1a3a1;
+  font-family: Open Sans,sans-serif;
+  font-style: normal
+}
+
+.btn {
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #000;
+  font-size: 24px;
+  cursor: pointer;
+  font-style: italic;
+  font-weight: 700;
+  padding: 12px 70px;
+  transition: all .15s ease-in-out
+}
+
+.btn.disabled {
+  background-color: #f0f0f0;
+  color: #a1a3a1;
+  border-color: #a1a3a1;
+  cursor: not-allowed
+}
+
+.btn:not(.disabled):hover {
+  border-color: #864bff;
+  color: #745dff;
+  text-shadow: 1px 1px 0px #864bff;
+  box-shadow: 1px 1px #864bff
+}
+
+.btn:not(.disabled):active {
+  color: #fff!important;
+  background-image: linear-gradient(to bottom,#864bff,#5082ff);
+  border-color: #5082ff;
+  transition: none
+}
+
+.dropzone {
+  width: 100%;
+  height: 60%;
+  border: 1.5px dashed #989898;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.dropzone div {
+  color: #989898;
+  width: 50%;
+  text-align: center;
+  line-height: 30px
+}
+
+.dropzone div span {
+  color: #638eff
+}
+
+.files-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px
+}
+
+.files-list:hover {
+  overflow: hidden
+}
+
+.files-list div {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer
+}
+
+.files-list div .file-name {
+  font-size: 12px;
+  text-align: center
+}
+
+.files-list div .image-file {
+  object-fit: cover
+}
+
+.files-list div svg {
+  color: #000;
+  font-size: 34px;
+  margin-bottom: 6px
+}
+
+.files-list div:hover {
+  background-color: #9ea1a11a
+}
+
+.add-more-file {
+  line-height: 20px
+}
+
+.add-more-file svg {
+  margin-bottom: 0!important;
+  font-size: 24px
+}
+
+.add-more-file p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700
+}
+
+.add-more-file span {
+  font-size: 10px;
+  color: #9ea1a1cc!important
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap
+}
+
+.footer .footer-link {
+  padding: 0 10px
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: Poppins-Regular,sans-serif;
+  margin: 0;
+  padding: 0
+}
+
+.container {
+  width: 900px;
+  margin: 50px auto;
+  position: relative
+}
+
+.main-card {
+  background-color: #fff;
+  box-shadow: 0 21px 33px #0000001a;
+  padding: 30px;
+  margin-top: 30px
+}
+
+.how_it_work-container {
+  text-align: center
+}
+
+.how_it_work-container .topcard h2 {
+  font-weight: 200;
+  color: #000
+}
+
+.how_it_work-container .topcard p {
+  color: #b4b4b4;
+  font-size: large;
+  margin-top: 10px
+}
+
+.how_it_work-container .bottomcard {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px
+}
+
+.how_it_work-container .bottomcard .step h1 {
+  font-size: 50px;
+  color: silver
+}
+
+.how_it_work-container .bottomcard .step h3 {
+  font-size: 21px;
+  color: #000;
+  font-weight: 400
+}
+
+.how_it_work-container .bottomcard .step h3 span {
+  font-weight: 900
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: Open Sans,sans-serif
+}
+
+.container {
+  transition: all .3s ease-in-out;
+  width: 900px;
+  margin: 50px auto 0;
+  position: relative
+}
+
+.main-card {
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  min-height: 400px;
+  height: auto;
+  margin-top: 30px;
+  box-shadow: 0 21px 33px #0000001a
+}
+
+.feedback {
+  padding: 30px 50px;
+  width: 100%
+}
+
+.feedback h2 {
+  display: flex;
+  justify-content: center
+}
+
+.feedback form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 25px 0
+}
+
+.feedback form h2 {
+  color: #353535;
+  font-weight: 200
+}
+
+.feedback form .fields {
+  margin-top: 25px;
+  width: 60%;
+  text-align: center
+}
+
+.feedback form .fields span {
+  text-align: start;
+  margin-top: 10px
+}
+
+.feedback form .fields span p {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -.5px;
+  color: #000;
+  margin-bottom: 8px
+}
+
+.feedback form .fields span .error-message {
+  color: red;
+  text-align: end;
+  font-size: 12px;
+  text-transform: none;
+  margin: 4px 0;
+  opacity: 0;
+  transition: opacity .3s ease-in-out
+}
+
+.feedback form .fields span .error-message.show {
+  opacity: 1
+}
+
+.feedback form .fields span input {
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 4px 6px;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0,0,0,.4588235294);
+  transition: all .3s
+}
+
+.feedback form .fields span input:focus {
+  border-bottom: 1px solid #000
+}
+
+.feedback form .fields span input::-webkit-input-placeholder {
+  font-weight: 400;
+  transition: color .3s
+}
+
+.feedback form .fields span input:-moz-placeholder {
+  font-weight: 400;
+  transition: color .3s
+}
+
+.feedback form .fields span input::-moz-placeholder {
+  font-weight: 400;
+  transition: color .3s
+}
+
+.feedback form .fields span input:-ms-input-placeholder {
+  font-weight: 400;
+  transition: color .3s
+}
+
+.feedback form .fields span input:focus::-webkit-input-placeholder {
+  transition: color .3s;
+  color: #fff
+}
+
+.feedback form .fields span input:focus:-moz-placeholder {
+  transition: color .3s;
+  color: #fff
+}
+
+.feedback form .fields span input:focus::-moz-placeholder {
+  transition: color .3s;
+  color: #fff
+}
+
+.feedback form .fields span input:focus:-ms-input-placeholder {
+  transition: color .3s;
+  color: #fff
+}
+
+.feedback form .fields span .text-area {
+  box-shadow: inset 0 4px 7px #c6c6c68a;
+  line-height: 1.93;
+  letter-spacing: .5px;
+  transition: all .3s;
+  resize: none;
+  font-size: 16px;
+  color: #000;
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  overflow: hidden;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased
+}
+
+.feedback form .fields span .text-area::-webkit-scrollbar {
+  display: none
+}
+
+.feedback form .fields span .text-area:focus {
+  outline: none
+}
+
+.feedback form .fields span .text-area::placeholder {
+  color: #4a4a4a;
+  font-weight: lighter
+}
+
+.feedback form .fields span .text-area::-webkit-input-placeholder {
+  transition: color .3s
+}
+
+.feedback form .fields span .text-area:-moz-placeholder {
+  transition: color .3s
+}
+
+.feedback form .fields span .text-area::-moz-placeholder {
+  transition: color .3s
+}
+
+.feedback form .fields span .text-area:-ms-input-placeholder {
+  transition: color .3s
+}
+
+.feedback form .fields span .text-area:focus::-webkit-input-placeholder {
+  transition: color .3s;
+  color: #fff
+}
+
+.feedback form .fields span .text-area:focus:-moz-placeholder {
+  transition: color .3s;
+  color: #fff
+}
+
+.feedback form .fields span .text-area:focus::-moz-placeholder {
+  transition: color .3s;
+  color: #fff
+}
+
+.feedback form .fields span .text-area:focus:-ms-input-placeholder {
+  transition: color .3s;
+  color: #fff
+}
+
+.feedback form .fields .send-feedback-btn {
+  width: 100%;
+  opacity: 1;
+  position: relative;
+  min-height: 61px;
+  padding: 0;
+  border: 2px solid #000;
+  border-radius: 0;
+  background: #fff;
+  font-size: 20px;
+  font-style: italic;
+  letter-spacing: .6px;
+  line-height: 57px;
+  cursor: pointer;
+  color: #000;
+  font-weight: 700
+}
+
+.feedback form .fields .send-feedback-btn:disabled {
+  background-color: #fff;
+  border-color: #ccc;
+  color: #ccc;
+  cursor: not-allowed
+}
+
+.feedback form .fields .send-feedback-btn:not(:disabled):hover {
+  border-image: linear-gradient(to bottom,#745dff,#638eff);
+  border-image-slice: 1;
+  color: #745dff
+}
+
+.feedback form .fields .send-feedback-btn,.feedback form .fields .send-feedback-btn:after {
+  transition: all .15s ease-in-out
+}
+
+.feedback form .fields .send-feedback-btn:not(:disabled):active {
+  background: linear-gradient(to bottom,#745dff,#638eff);
+  color: #fff
+}
+
+
+/* App.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the app container takes full viewport height */
+}
+
+.main-content {
+  flex: 1; /* Pushes the footer to the bottom */
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
